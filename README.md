@@ -61,11 +61,11 @@ npm start
 
 ## 🔌 Uso de la API
 
-### `GET /check-estado/:codigo`
+### `GET /estado/:codigo`
 
 Devuelve el último estado de un envío dado su código de seguimiento.
 
-**Query params:**
+**Route params:**
 
 | Parámetro | Tipo | Requerido | Descripción |
 |---|---|---|---|
@@ -74,18 +74,18 @@ Devuelve el último estado de un envío dado su código de seguimiento.
 **Ejemplo de request:**
 
 ```
-GET /check-estado/AB123456789AR
+GET /estado/AB123456789AR
 ```
 
 **Ejemplo de respuesta exitosa:**
 
 ```json
 {
-	"Fecha": "03-02-2026 12:00",
-	"Planta": "SOLEIL",
-	"Historia": "INTENTO DE ENTREGA",
-	"Estado": "ENTREGA EN SUCURSAL",
-	"codigo de seguimiento": "AB123456789AR"
+  "Fecha": "15/03/2024",
+  "Hora": "10:32",
+  "Estado": "En camino a sucursal de destino",
+  "Sucursal": "Buenos Aires Centro",
+  "codigo de seguimiento": "AB123456789AR"
 }
 ```
 
@@ -93,7 +93,15 @@ GET /check-estado/AB123456789AR
 
 ```json
 {
-  "error":      "something went wrong working with chequear estado correo argentino"
+  "error": "No se encontró información o el sitio no respondió"
+}
+```
+
+**Respuesta cuando falta el código:**
+
+```json
+{
+  "message": "se necesita el codigo de seguimiento"
 }
 ```
 
