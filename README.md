@@ -61,7 +61,7 @@ npm start
 
 ## 🔌 Uso de la API
 
-### `GET /estado/:codigo`
+### `GET /check-estado/:codigo`
 
 Devuelve el último estado de un envío dado su código de seguimiento.
 
