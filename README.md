@@ -93,7 +93,7 @@ GET /check-estado/AB123456789AR
 
 ```json
 {
-  "error": "No se encontró información o el sitio no respondió"
+  "error":      "something went wrong working with chequear estado correo argentino"
 }
 ```
 
