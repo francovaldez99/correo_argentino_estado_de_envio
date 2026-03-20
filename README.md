@@ -74,7 +74,7 @@ Devuelve el último estado de un envío dado su código de seguimiento.
 **Ejemplo de request:**
 
 ```
-GET /estado/AB123456789AR
+GET /check-estado/AB123456789AR
 ```
 
 **Ejemplo de respuesta exitosa:**
